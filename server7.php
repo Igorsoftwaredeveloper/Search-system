@@ -57,9 +57,9 @@ class Internal {
 	
 	function Mask()
 	{
-		preg_match_all("#<h3 class='clk'><a href='(.*?)' id=#",$this->page[0],$this->link[0]);
+		preg_match_all('#<h3 class="search-item__title"><a href="(.*?)"  target="_blank#',$this->page[0],$this->link[0]);
 		preg_match_all('#<li class="b_algo"><h2><a href="(.*?)" h="ID=SERP,#',$this->page[1],$this->link[1]);
-		preg_match_all('#class=" td-u" href="(.*?)"#',$this->page[2],$this->link[2]);
+		preg_match_all('#<a class=" ac-algo fz-l ac-21th lh-24" href="(.*?)" target#',$this->page[2],$this->link[2]);
 		preg_match_all('#","url":"(.*?)"#',$this->page[3],$this->link[3]);
 		preg_match_all('#<a target="_blank" tabindex="2" class="b-serp-item__link" href="(.*?)"#',$this->page[4],$this->link[4]);
 		preg_match_all('#<div class="b-result-title"><a href="(.*?)"#',$this->page[5],$this->link[5]);
